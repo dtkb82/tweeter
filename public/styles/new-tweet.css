@@ -1,0 +1,38 @@
+.container .new-tweet {
+	background-color: lightblue;
+	margin-top: 20px;
+	border-radius: 15px;
+	width: 400px;
+	height: 150px;
+}
+
+.container .counter {
+	align-content: right;
+}
+
+.container {
+	background-color: : lightblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0;
+	margin-bottom: 100px;
+	height: 500px;
+}
+
+.container textarea {
+	width: 380px;
+	margin-left: 10px;
+	
+}
+
+.container input {
+	margin-left: 10px;
+}
+
+.container h2 {
+	margin-top: 10px
+	margin-left: 10px;
+	border-bottom: 1px solid black;
+
+}
