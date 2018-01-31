@@ -4,12 +4,12 @@
 	color: #e8fdff;
 	height: 80px;
 	top: 0px;
-	padding: 0, 2em, 0, 2em;
+	padding-left: 2em;
+	padding-right: 2em; 
 	
 }
 
 #nav-bar .logo {
-	margin-left: 6%;
 	width: 80px;
 	height: 80px;
 	float: left;

@@ -27,6 +27,8 @@ main {
 	margin: 0 auto;
 	background-color: white;
 	margin-top: 100px;
+	position: center;
+	align-content: center;
 }
 
 /*

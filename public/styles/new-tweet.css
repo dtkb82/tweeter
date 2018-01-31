@@ -1,9 +1,9 @@
 .container .new-tweet {
 	background-color: lightblue;
-	margin-top: 20px;
 	border-radius: 15px;
 	width: 400px;
 	height: 150px;
+	position: relative;
 }
 
 .container .counter {
@@ -13,6 +13,7 @@
 .container {
 	background-color: : lightblue;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin-top: 0;
@@ -35,4 +36,58 @@
 	margin-left: 10px;
 	border-bottom: 1px solid black;
 
+}
+ #posts {
+ 	display: block;
+ 	position: relative;
+ 	border: 1px solid black
+ 	border-radius: 15px;
+ 	border: 1px lightblue;
+ }
+
+ .article p {
+ 	color: black;
+
+ }
+
+ .article header {
+ 	display: flex;
+ 	color: black;
+ 	background-color: lightgrey;
+ 	width: 400px;
+	height: 70px;
+	border-radius: 15px 15px 0px 0px;
+
+ }
+
+ .article footer {
+ 	color: black;
+ 	background-color: lightgrey;
+ 	width: 400px;
+	height: 30px;
+	border-radius: 0px 0px 15px 15px;
+ }
+
+ .article span {
+ 	color: black;
+ 	align-content: right;
+ }
+ 	
+ }
+
+ #posts {
+ 	border: 1px solid grey;
+ 	border-radius: 15px;
+ }
+
+ .icons i {
+ padding: 0 5px;
+ color: #00a087;
+ font-size: 20px;
+ opacity: 0;
+ transition: all 1s ease;
+}
+
+.tweet-section:hover .icons i {
+ opacity: 1;
 }
