@@ -4,6 +4,7 @@
 	width: 400px;
 	height: 150px;
 	position: relative;
+	display: flex;
 }
 
 .container .counter {
@@ -19,6 +20,12 @@
 	margin-top: 0;
 	margin-bottom: 100px;
 	height: 500px;
+}
+
+.container .new-tweet {
+	display: flex;
+	flex-flow: column;
+	position: relative;
 }
 
 .container textarea {
@@ -43,6 +50,11 @@
  	border: 1px solid black
  	border-radius: 15px;
  	border: 1px lightblue;
+ }
+
+ .article {
+ 	position: relative;
+ 	margin: auto;
  }
 
  .article p {
@@ -76,8 +88,11 @@
  }
 
  #posts {
+ 	/*flex-direction: column;
+ 	justify-content: flex-end;*/
  	border: 1px solid grey;
  	border-radius: 15px;
+ 	position: relative;
  }
 
  .icons i {
