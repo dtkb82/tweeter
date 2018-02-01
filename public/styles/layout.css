@@ -23,13 +23,14 @@ body {
 
 main {
 	width: 450px;
-	height: 800px;
 	margin: 0 auto;
 	background-color: white;
 	margin-top: 100px;
 	position: center;
 	align-content: center;
 }
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

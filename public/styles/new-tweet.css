@@ -7,10 +7,6 @@
 	display: flex;
 }
 
-.container .counter {
-	align-content: right;
-}
-
 .container {
 	background-color: : lightblue;
 	display: flex;
@@ -19,7 +15,6 @@
 	align-items: center;
 	margin-top: 0;
 	margin-bottom: 100px;
-	height: 500px;
 }
 
 .container .new-tweet {
@@ -55,10 +50,18 @@
  .article {
  	position: relative;
  	margin: auto;
+ 	margin-top: 40px;
  }
 
- .article p {
+ .article p .name {
  	color: black;
+ }
+
+ .artickle p .handle {
+
+ }
+
+ .article p .text {
 
  }
 
@@ -88,11 +91,14 @@
  }
 
  #posts {
- 	/*flex-direction: column;
- 	justify-content: flex-end;*/
  	border: 1px solid grey;
  	border-radius: 15px;
  	position: relative;
+ }
+
+ #counter {
+ 	position: : relative;
+ 	
  }
 
  .icons i {
@@ -106,3 +112,18 @@
 .tweet-section:hover .icons i {
  opacity: 1;
 }
+
+ #error {
+ 	color: red;
+ 	font-size: 20px;
+ 	margin: auto;
+ 	margin: center;
+ 	opacity: 0;
+ }
+
+ #compose {
+  	position: relative;
+  	top: 30px;
+  	left: 300px;
+  	display: inline-block;
+ }
