@@ -98,7 +98,9 @@
 
  #counter {
  	position: : relative;
- 	
+ 	float: right;
+    text-align: right;
+    margin-right: 10px
  }
 
  .icons i {
@@ -115,10 +117,11 @@
 
  #error {
  	color: red;
- 	font-size: 20px;
- 	margin: auto;
- 	margin: center;
+ 	font-size: 15px;
+ 	font-weight: 50%;
+ 	margin-left: 15px;
  	opacity: 0;
+ 	float: left;
  }
 
  #compose {
@@ -126,4 +129,26 @@
   	top: 30px;
   	left: 300px;
   	display: inline-block;
+ }
+
+ #submit {
+ 	float: left; 
+ }
+
+ .fa {
+ 	float: right;
+ 	margin-right: 20px;
+ 	margin-top: 5px;
+ }
+
+ .handle {
+ 	align-content: right;
+ }
+
+ .name {
+ 	float: left;
+ }
+
+ .user-avatar {
+ 	float: left;
  }
