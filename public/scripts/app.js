@@ -3,27 +3,25 @@
 $(document).ready(function() {
 function createTweetElement(obj){
 	return (
-		$(`<article class="article">
-			<header class="header">
-				<img class="user-avatar" src="${obj.user.avatars.small}"/>
-				<p class="name">${obj.user.name}</p>
-				<p class="handle">${obj.user.handle}</p>
-			</header>
-			<div>
-				<p class="text">${escape(obj.content.text)}</p>
-			</div>	
-			<footer class="footer">
-				<p class="date">${obj.created_at}</p>
-				<span class="icons"> 		
-					<i class="fa fa-heart" aria-hidden="true"></i>
-                    <i class="fa fa-retweet" aria-hidden="true"></i>
-                    <i class="fa fa-flag" aria-hidden="true"></i>
-        		</span>
-        	</footer>
+    $(`<article class="article">
+          <header class="header">
+            <img class="user-avatar" src="${obj.user.avatars.small}"/>
+              <p class="name">${obj.user.name}</p>
+				      <p class="handle">${obj.user.handle}</p>
+			     </header>
+			     <div>
+            <p class="text">${escape(obj.content.text)}</p>
+			     </div>
+           <footer class="footer">
+            <p class="date">${obj.created_at}</p>
+            <span class="icons">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <i class="fa fa-retweet" aria-hidden="true"></i>
+              <i class="fa fa-flag" aria-hidden="true"></i>
+            </span>
+           </footer>
         </article>`));
-
 }
-
 //empty the past tweets, iterate through tweets and diplay most recent at the top
 function renderTweets(tweets){
   $('#posts').empty();
@@ -71,7 +69,6 @@ if ($textArea > 0 && $textArea <= 140){
         $("#error").css("opacity", 1);
         $('#error').delay(1000).fadeOut();
       }
-
 });
 //slide functionality for the compose button
 $("#compose").click(function(){

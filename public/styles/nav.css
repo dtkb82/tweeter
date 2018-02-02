@@ -7,8 +7,7 @@
 	padding-left: 2em;
 	padding-right: 2em; 
 	display: flex;
-	flex-direction: row;
-	
+	flex-direction: row;	
 }
 
 #nav-bar .logo {
@@ -32,10 +31,13 @@
 
 #compose {
 	border-radius: 10px;
-    height: 80px;
+    height: 40px;
     width: 120px;
-    margin-left: 40%;
-    margin-top: 1%;
+    margin-left: 20%;
+    margin-top: 40px;
+    border: 1px solid black;
+    background-color: #bbdfd6;
+    color: #00a087;
 }
 
 button i {
