@@ -1,8 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+
+//When the document has finished loading. return the tweet in this structure
 $(document).ready(function() {
 function createTweetElement(obj){
 	return (
@@ -27,7 +24,7 @@ function createTweetElement(obj){
 
 }
 
-
+//empty the past tweets, iterate through tweets and diplay most recent at the top
 function renderTweets(tweets){
   $('#posts').empty();
 	for (key of tweets){
@@ -41,9 +38,11 @@ function escape(str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
-
+//making sure each tweet has the appropriate amount of characters before it is sent to the server
 $(".new-tweet form").on("submit", function(event) {
+
   event.preventDefault()
+
 var $textArea = $(".new-tweet textarea").val().length;
 
 if ($textArea > 0 && $textArea <= 140){
@@ -60,27 +59,27 @@ if ($textArea > 0 && $textArea <= 140){
           }
         });
 
-  $("#textarea").val('');
+      $("#textarea").val('');
 
-    } else if ($textArea === 0) {
-      event.preventDefault();
-      $("#error").css("opacity", 1);
-      $('#error').delay(1000).fadeOut();
-    } else if ($textArea > 140){
-      event.preventDefault();
-      $("#error").css("opacity", 1);
-      $('#error').delay(1000).fadeOut();
-    }
+      } else if ($textArea === 0) {
+        event.preventDefault();
+        $("#error").css("opacity", 1);
+        $('#error').delay(1000).fadeOut();
 
+      } else if ($textArea > 140){
+        event.preventDefault();
+        $("#error").css("opacity", 1);
+        $('#error').delay(1000).fadeOut();
+      }
 
-    
 });
-
+//slide functionality for the compose button
 $("#compose").click(function(){
-  $(".new-tweet").slideToggle();
+  $(".new-tweet").slideToggle(function() {
+    $("#textarea").focus();
+  });
 });
-  
-
+//getting past tweets from the server
 function loadTweets(){
   var $button = $('#submit');
   $button.on('click', function(){
@@ -97,12 +96,6 @@ function loadTweets(){
 }
  
 loadTweets();
-
-// event.preventDefault()
-
-
-
- // renderTweets(data);
 	
 });
 
