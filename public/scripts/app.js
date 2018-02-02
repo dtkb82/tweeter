@@ -13,53 +13,67 @@ function createTweetElement(obj){
 				<p class="handle">${obj.user.handle}</p>
 			</header>
 			<div>
-				<p class="text">${obj.content.text}</p>
+				<p class="text">${escape(obj.content.text)}</p>
 			</div>	
 			<footer class="footer">
-				${obj.created_at}
-				<span> 		
+				<p class="date">${obj.created_at}</p>
+				<span class="icons"> 		
 					<i class="fa fa-heart" aria-hidden="true"></i>
                     <i class="fa fa-retweet" aria-hidden="true"></i>
                     <i class="fa fa-flag" aria-hidden="true"></i>
         		</span>
         	</footer>
         </article>`));
+
 }
 
 
 function renderTweets(tweets){
+  $('#posts').empty();
 	for (key of tweets){
 		var $tweet = createTweetElement(key);
-		$('#posts').prepend($tweet);
+	$('#posts').prepend($tweet);
 	}
 }
-
+//makes sure there is not unsafe text in tweets that could crash the application
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 $(".new-tweet form").on("submit", function(event) {
   event.preventDefault()
-  var $textArea = $(".new-tweet textarea").val().length;
+var $textArea = $(".new-tweet textarea").val().length;
 
-    if ($textArea > 0 && $textArea <= 140){
-    
-        console.log('Button clicked, performing ajax call...')
+if ($textArea > 0 && $textArea <= 140){
+  
+  console.log('Button clicked, performing ajax call...')
 
-        $.ajax({
+  $.ajax({
           url:  '/tweets',
           method: "POST",
           data: $(this).serialize(), 
-          success: function() {
+          success: function(data) {
             loadTweets();
           console.log('Success:', data);
           }
-       });
+        });
+
+  $("#textarea").val('');
 
     } else if ($textArea === 0) {
       event.preventDefault();
       $("#error").css("opacity", 1);
+      $('#error').delay(1000).fadeOut();
     } else if ($textArea > 140){
       event.preventDefault();
       $("#error").css("opacity", 1);
+      $('#error').delay(1000).fadeOut();
     }
+
+
+    
 });
 
 $("#compose").click(function(){

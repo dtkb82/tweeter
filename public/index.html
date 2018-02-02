@@ -30,7 +30,7 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
-      <button id="compose" <i class="far fa-edit"></i>Compose</button>
+      <button id="compose" <i class="fa fa-edit"></i>Compose</button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -38,7 +38,7 @@
       <section class="new-tweet">
           <h2>Compose Tweet</h2>
         <form action="/tweets/" class="form" method="POST">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <textarea id="textarea" name="text" placeholder="What are you humming about?"></textarea>
           <input id="submit"  class="submit" type="submit" value="Tweet">
           <p id="error">"Please enter valid Tweet!"</p>
           <span id="counter" class="counter">140
@@ -56,9 +56,9 @@
             <div>
               <p class="text">TWEET THIS!!</p>
             </div>
-            <footer class="footer">10 days ago
-
-              <span> 
+            <footer class="footer">
+              <p class="date">10 days ago</p>
+              <span class="icons"> 
                 <i class="fa fa-heart" aria-hidden="true"></i>
                 <i class="fa fa-retweet" aria-hidden="true"></i>
                 <i class="fa fa-flag" aria-hidden="true"></i>

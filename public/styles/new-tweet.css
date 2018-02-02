@@ -3,12 +3,13 @@
 	border-radius: 15px;
 	width: 400px;
 	height: 150px;
-	position: relative;
 	display: flex;
+	flex-direction: column;
+	margin-top: 5%;
+	margin-bottom: 5%;
 }
 
 .container {
-	background-color: : lightblue;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -17,10 +18,14 @@
 	margin-bottom: 100px;
 }
 
-.container .new-tweet {
+#header {
 	display: flex;
-	flex-flow: column;
-	position: relative;
+	flex-direction: row;
+}
+
+#footer {
+	display: flex;
+	flex-direction: row;
 }
 
 .container textarea {
@@ -39,30 +44,23 @@
 	border-bottom: 1px solid black;
 
 }
- #posts {
- 	display: block;
- 	position: relative;
- 	border: 1px solid black
- 	border-radius: 15px;
- 	border: 1px lightblue;
+
+.article {
+ 	flex-direction: column;
+ 	margin-top: 5%;
+ 	opacity: .5;
  }
+
+.article:hover {
+	opacity: 1;
+}
+
 
  .article {
- 	position: relative;
- 	margin: auto;
- 	margin-top: 40px;
- }
-
- .article p .name {
- 	color: black;
- }
-
- .artickle p .handle {
-
- }
-
- .article p .text {
-
+    position: relative;
+    margin-bottom: 5%;
+    border: 1px solid black;
+    border-radius: 15px;
  }
 
  .article header {
@@ -76,44 +74,21 @@
  }
 
  .article footer {
+ 	display: flex;
+    flex-direction: row;
  	color: black;
  	background-color: lightgrey;
  	width: 400px;
 	height: 30px;
 	border-radius: 0px 0px 15px 15px;
  }
-
- .article span {
- 	color: black;
- 	align-content: right;
- }
  	
- }
-
- #posts {
- 	border: 1px solid grey;
- 	border-radius: 15px;
- 	position: relative;
- }
-
  #counter {
  	position: : relative;
  	float: right;
     text-align: right;
     margin-right: 10px
  }
-
- .icons i {
- padding: 0 5px;
- color: #00a087;
- font-size: 20px;
- opacity: 0;
- transition: all 1s ease;
-}
-
-.tweet-section:hover .icons i {
- opacity: 1;
-}
 
  #error {
  	color: red;
@@ -124,31 +99,47 @@
  	float: left;
  }
 
- #compose {
-  	position: relative;
-  	top: 30px;
-  	left: 300px;
-  	display: inline-block;
- }
-
  #submit {
  	float: left; 
  }
 
- .fa {
- 	float: right;
- 	margin-right: 20px;
- 	margin-top: 5px;
- }
-
  .handle {
- 	align-content: right;
+ 	margin-left: 35%;
+ 	font-size: 15px;
+ 	font-weight: 400;
  }
 
  .name {
- 	float: left;
+ 	margin-left: 2%;
+ 	font-weight: bolder;
+ 	font-size: 20px;
+ 	margin-top: 1%;
+ 	color: #264b81;
  }
 
  .user-avatar {
- 	float: left;
+ 	max-width: 80%;
+ 	max-height: 80%;
+ 	margin-left: 2%;
+ 	margin-top: 2%;
+ 	border-radius: 5px;
  }
+
+ .date {
+ 	margin-top: 0px;
+    margin-bottom: 0px;
+ }
+
+.icons {
+	margin-left: 50%;
+    margin-top: 1%;
+}
+
+.date {
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+.fa {
+	margin: 5px;
+}
