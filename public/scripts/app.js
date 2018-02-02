@@ -78,18 +78,7 @@ $(document).ready(function() {
   });
   //getting past tweets from the server
   function loadTweets(){
-    // var $button = $('#submit');
-    // $button.on('click', function(){
-    //   console.log("button clicked");
-    //   $.ajax({
-    //     dataType: "json",
-    //     url: "/tweets",
-    //     method: "GET",
-    //     success: function(objFromServer){
-    //       renderTweets(objFromServer);
-    //     }
-    //   });
-    // })
+   
     $.ajax({
       dataType: "json",
       url: "/tweets",
