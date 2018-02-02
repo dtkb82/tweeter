@@ -46,22 +46,17 @@
 }
 
 .article {
- 	flex-direction: column;
  	margin-top: 5%;
+ 	width: 402px;
  	opacity: .5;
+    margin-bottom: 5%;
+    border: 2px solid black;
+    border-radius: 15px;
  }
 
 .article:hover {
 	opacity: 1;
 }
-
-
- .article {
-    position: relative;
-    margin-bottom: 5%;
-    border: 1px solid black;
-    border-radius: 15px;
- }
 
  .article header {
  	display: flex;
@@ -104,9 +99,10 @@
  }
 
  .handle {
- 	margin-left: 35%;
- 	font-size: 15px;
- 	font-weight: 400;
+ 	float: right;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 100px;
  }
 
  .name {
